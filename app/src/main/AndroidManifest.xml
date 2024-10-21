@@ -25,6 +25,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity android:name=".LevelsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
     </application>
 
 </manifest>

@@ -1,6 +1,8 @@
 package com.example.colorspill
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -18,5 +20,24 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView (R.layout.activity_main)
+
+        val playButton = findViewById<Button>(R.id.playButton)
+        val leaderboardButton = findViewById<Button>(R.id.leaderboardButton)
+        val settingsButton = findViewById<Button>(R.id.settingsButton)
+
+        playButton.setOnClickListener {
+            val intent = Intent(this, LevelsActivity::class.java)
+            startActivity(intent)
+        }
+
+        leaderboardButton.setOnClickListener {
+            // Handle Leaderboard button click
+            // Navigate to the leaderboard activity or display a leaderboard
+        }
+
+        settingsButton.setOnClickListener {
+            // Handle Settings button click
+            // Navigate to the settings activity or display settings options
+        }
     }
 }
